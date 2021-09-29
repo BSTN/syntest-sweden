@@ -1,0 +1,487 @@
+body,
+html {
+    font-family: Roboto;
+    font-weight:500;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    height:100%;
+    letter-spacing:0.05em;
+    &.static {
+        overflow:auto;
+    }
+}
+
+#ie8 {
+    display:none;
+}
+
+.ie #ie8 {
+    display:block;
+}
+
+#gradient {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    -webkit-overflow-scrolling: touch;
+    @include background();
+    @include media('framemplus'){
+        background:$background;
+    }
+}
+
+#absolute {
+    position:fixed !important;
+    right:0;
+    bottom:0;
+    z-index:999;
+    display:none;
+    button {
+        background:$grijs;
+        color:$background;
+        line-height:2em;
+        @include rounded(3px);
+        letter-spacing:0.1em;
+        width:auto;
+        padding: 0 2em;
+        &:hover {
+            background:$support1;
+        }
+    }
+}
+
+#reset {
+    position:fixed;
+    top:0;
+    right:0;
+    margin:1em;
+    padding:0.5em 1em;
+    line-height:1em;
+    background:$grijs;
+    color:#fff;
+    z-index:99999;
+    cursor:pointer;
+    @include rounded(5px);
+    font-size:11px;
+    display:none;
+    &:hover {
+        background:$support1;
+    }
+}
+
+#ie8 {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:999999;
+    background:$background;
+    overflow:auto;
+    #box {
+        max-width:500px;
+        margin:50px auto;
+        text-align:center;
+        font-weight:300;
+        font-family:arial;
+        padding:40px;
+        a {
+            color:#999;
+        }
+    }
+}
+
+section {
+    position: relative;
+    line-height: 2em;
+    font-weight: 300;
+    text-align: center;
+    text-align:left;
+    color:#555;
+    overflow:visible;
+    @include media('framemplus'){
+        background:$background;
+    }
+    .static & {
+        overflow:visible;
+    }
+    @include padding();
+    @media (max-width:$mob) {
+        font-size: 1em;
+    }
+    @media (min-width:$mid) {
+        font-size: 1em;
+    }
+    h1, h2, h3, h4, {
+        font-weight:300;
+        letter-spacing:0.1em;
+        text-align:center;
+        // margin-left:2em;
+        // margin-right:2em;
+    }
+    h1 {
+        letter-spacing:0.1em;
+        line-height:1.5em;
+        margin-top:2em;
+        margin-bottom:2em;
+        text-align: center;
+        margin-left:1em;
+        margin-right:1em;
+    }
+    p {
+        margin: 0 auto 2em auto;
+        max-width:550px;
+    }
+    a {
+        @include link();
+    }
+}
+
+#intro, .text, #help {
+    height:auto;
+    margin: 0em auto 0 auto;
+    max-width: 700px;
+    padding:0 2em 2em 2em;
+    @include padding();
+    @media (max-width:320px){
+        font-size: 13px;
+    }
+}
+
+#intro, .text, #help, #results, #altprofiel {
+    h1 {
+        max-width:90%;
+        margin-left:auto;
+        margin-right:auto;
+        overflow:visible;
+        clear:both;
+        position: relative;
+        margin-bottom:3em;
+        @media (min-width:$mob){
+            // max-width:300px;
+        }
+        @media (min-width:$mid){
+            // margin-top:50px;
+        }
+        &:after {
+            content:" ";
+            position:absolute;
+            width:100px;
+            border-bottom:5px solid #555;
+            bottom:-20px;
+            left:50%;
+            margin-left:-50px;
+        }
+    }
+    &.start {
+        text-align:center;
+        margin-top:3em;
+        @media (min-width:$mob) {
+            font-size: 1.2em;
+        }
+        @media (min-width:$mid) {
+            font-size: 1.5em;
+            line-height:1.8em;
+        }
+    }
+    a {
+        color:$support2;
+        &:before, &:after {
+            display:none;
+        }
+        &:hover {
+            color:$support1;
+        }
+    }
+}
+
+section #head {
+    clear:both;
+    height:auto;
+    overflow:hidden;
+    padding:10px;
+    @include padding();
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:99;
+    background:$background;
+    background:rgba(0,100,255,0.05);
+    background:rgba(#e0fffc,0.5);
+
+    @include shadow(0,0,5px,rgba(0,0,0,0.3));
+    opacity:0.9;
+
+    @include background();
+    // border-bottom:$border;
+    &:after {
+        content: " ";
+    }
+    span {
+        // display:none;
+    }
+    a {
+        float:left;
+        width:100px;
+        height:40px;
+        display:inline-block;
+        @include rounded(0);
+        // @include span(6 last);
+        background: url("../data/images/logok-zw.png") no-repeat left;
+        background-size: auto 100%;
+        opacity: .8;
+        &:after, &:before {
+            display:none;
+        }
+        &:hover {
+            opacity:1;
+        }
+    }
+    #info, #profile, #restart {
+        background:none;
+        text-align:center;
+        float:right;
+        font-size:11px;
+        letter-spacing:0.1em;
+        font-weight:400;
+        line-height:1.3em;
+        padding:0 ;
+        padding-top:0;
+        width:auto;
+        background:transparent;
+        margin-left:1em;
+        &:after,&:before {
+            display:none;
+        }
+        &:hover {
+            color:#555;
+            opacity:1;
+        }
+        i {
+            float:right;
+            display:inline-block;
+            background:url('images/clipboard_555.png') no-repeat center;
+            background-size:80% auto;
+            width:30px;
+            height:100%;
+            margin-left:3px;
+            vertical-align:middle;
+        }
+    }
+    #profile, #info {
+        width:auto;
+        padding:0 0 0 0.5em;
+        color:#555;
+        line-height:44px;
+        span {
+            display:inline-block;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }
+        @media (max-width:400px){
+            padding:0;
+            span {
+                display:none;
+            }
+        }
+    }
+    #profile {
+        border-right:$border;
+        margin-left:0;
+        padding:0 1em;
+        i {
+            background-image:url('images/profile_555.png');
+        }
+        &:hover {
+            color:$support2;
+            i {
+                background-image:url('images/profile_sp2.png');
+            }
+        }
+    }
+    #restart {
+        line-height:1.5em;
+        height:auto;
+        margin: 1em;
+        color:#000;
+        font-size:13px;
+        @include rounded(3px);
+        &:after, &:before {
+            display:block;
+        }
+        &:hover {
+            color:$support1;
+            cursor:pointer;
+        }
+    }
+    @media (min-width:300px){
+        #profile span {
+            display:inline-block;
+            max-width:70px;
+        }
+    }
+    @media (min-width:400px){
+        #profile span {
+            max-width:none;
+        }
+    }
+    @media (min-width:$mob+100px){
+        @include shadow2(none);
+        padding:2em 1em;
+        position:relative;
+        border-bottom:0;
+        a {
+            height:40px;
+        }
+        #profile {
+            span {
+                max-width:none;
+                width:auto;
+            }
+        }
+    }
+
+    @media (min-width:$mid){
+        background:transparent;
+    }
+}
+
+*[koppen]{
+    position:relative;
+    text-align:center;
+    // display:none;
+    height:auto;
+    position:relative;
+    overflow:hidden;
+    z-index:9;
+    @include select();
+    @include padding();
+    #burger {
+        position:relative;
+        float:right;
+        right:0;
+        top:0;
+        width:40px;
+        height:40px;
+        cursor:pointer;
+        i {
+            @include menu(20px,3px,#555);
+        }
+        &:hover {
+            i {
+                @include menu(20px,3px,$support1);
+            }
+        }
+    }
+    #back {
+        position:relative;
+        left:0;
+        top:0;
+        background:url('../data/images/logok-zw.png') no-repeat center;
+        background-size:100% auto;
+        width:80px;
+        height:40px;
+        opacity:0.5;
+        // @include rounded(50%);
+        &:after, &:before {
+            display:none;
+        }
+        &:hover {
+            opacity:1;
+        }
+    }
+    #kop {
+        display:none;
+        line-height:1.5em;
+        margin-top:1.5em;
+        margin-bottom:1.5em;
+        color:$text;
+        // background:$background;
+        font-size:13px;
+        cursor:pointer;
+        @include transition(0.3s);
+        &:hover {
+            color:$support1;
+        }
+        &.active {
+            font-weight:bold;
+        }
+    }
+    #line {
+        display:none;
+        position:absolute;
+        width:0;
+        height:100%;
+        left:50%;
+        top:0;
+        border-left:1px solid $support1;
+        opacity:0.3;
+        z-index:-1;
+        &:before, &:after {
+            content:" ";
+            position:absolute;
+            @include rounded(50%);
+            background:$support1;
+            width:5px;
+            height:5px;
+            top:0;
+            left:-3px;
+        }
+        &:after {
+            top:auto;
+            bottom:0;
+        }
+    }
+    #in {
+        height:auto;
+        display:block;
+        &.open {
+            height:auto;
+            #omkop {
+                padding-top:50px;
+                padding-bottom:50px;
+                // background:$background;
+                border-bottom:2px solid $grijs;
+            }
+            #kop {
+                display:block;
+            }
+        }
+    }
+}
+
+
+.gegevens {
+    color:$grijs;
+    font-size:0.8em;
+    line-height:1.5em;
+    margin: 5em 2em 10em 2em;
+    border-top:$border;
+    padding:3em 1em;
+    @include padding();
+}
+
+*[bstn] {
+    text-align:center;
+    font-size:11px;
+    color:$grijs;
+    line-height:1.8em;
+    padding:6em;
+    @include padding();
+    a {
+        font-style:italic;
+        color:#555 !important;
+        &:before, &:after {
+            border-bottom:2px solid #555;
+        }
+    }
+}

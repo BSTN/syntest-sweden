@@ -1,0 +1,35 @@
+{
+    "ID": "bokstaverochsiffror",
+    "link": "bokstaverochsiffror",
+    "relation": "main",
+    "disabled": false,
+    "type": "syn",
+    "titles": {
+        "menushort": "bokstäver och siffror",
+        "description": "klicka här för att komma till testet",
+        "time": "10 - 30 min"
+    },
+    "percentage": 80,
+    "resultinfo": "Tack för att du gjorde testet! Med din hjälp får vi ny kunskap om synestesi. Vi kan till exempel ta reda på om synestesi är vanligare bland vissa grupper av människor. <br>Synestesi är ett ofarligt sinnesfenomen som förekommer i olika grad hos människor. Personer som har färgsekvens-synestesi upplever alltid samma färg för en viss bokstav eller en siffra. Din poäng anger hur ofta du väljer samma färg för bokstäverna och siffrorna (i procent). Om du valde färger för minst hälften av bokstäverna/sifforna indikerar poängen hur synestetisk du är: Ju högre poäng du har desto mer synestetisk är du. Synesteter har vanligtvist ett resultat på minst 90%. Bokstäver som är vanliga (t.ex. A, E, N) är ofta förknippade med färger som är vanligt förekommande (t.ex. röd eller blå).",
+    "social": "Så här ser det ut för dig: Din poäng är: %% ",
+    "wow": "",
+    "DB": {
+        "ID": "INT AUTO_INCREMENT PRIMARY KEY",
+        "IP": "VARCHAR(255)",
+        "timestamp": "TIMESTAMP",
+        "setname": "TEXT"
+    },
+    "everyquestion": {
+        "timing": "INT",
+        "color": "VARCHAR(6)",
+        "position": "INT",
+        "symbol": "VARCHAR(1)"
+    },
+    "maxsetlength":117,
+    "sets":{
+        "set1": ["D","0","J","K","Q","R","2","M","O","6","V","F","I","5","T","G","8","9","W","4","Å","Ö","E","C","P","7","N","A","S","H","3","Y","U","X","Z","1","B","Ä","L","M","U","Å","V","W","S","8","G","4","7","Y","9","I","N","A","Ä","Q","E","O","Ö","H","Z","J","5","6","2","X","3","T","0","D","L","C","P","1","F","B","K","R","9","H","Ö","1","X","Q","G","0","B","5","C","8","Y","A","L","V","Z","R","J","Å","M","P","W","4","7","F","Ä","I","3","E","O","N","2","K","S","D","U","T","6"],
+        "set2": ["J","2","H","V","F","Z","Å","K","A","W","B","Y","0","8","M","U","5","Ö","6","D","X","S","C","E","3","Q","R","L","1","N","G","P","7","T","9","Ä","O","4","I","3","P","D","E","X","B","Å","K","J","9","Ö","S","5","A","7","T","Y","G","C","W","6","N","H","0","Z","Ä","4","2","M","Q","1","V","R","U","8","I","F","O","L","X","Z","6","4","G","H","A","9","Q","O","C","0","Y","2","V","3","Ä","R","K","W","E","8","F","Å","P","T","J","1","S","U","7","N","Ö","L","5","D","B","M","I"],
+        "set3": ["E","8","X","K","0","Å","V","M","7","Q","9","P","L","W","J","6","S","Z","Ö","H","N","F","Y","Ä","3","R","B","5","A","O","C","G","I","U","4","T","D","1","2","Å","Ö","E","X","N","9","Z","J","T","0","F","Q","C","A","V","Y","W","D","U","5","I","P","4","K","R","Ä","S","6","G","O","1","2","H","3","7","8","B","L","M","U","J","7","I","3","T","K","M","0","R","P","9","H","Å","1","Y","8","5","N","B","Ä","O","F","Q","A","W","2","E","D","4","L","Z","6","V","Ö","C","S","G","X"],
+        "set4": ["Ö","B","V","M","F","U","7","E","Å","3","S","X","D","N","H","1","G","P","I","Y","9","O","J","K","6","5","R","4","T","Ä","Q","A","2","Z","0","L","C","W","8","0","Y","K","W","S","4","G","X","M","B","E","F","N","U","1","R","6","7","9","A","2","J","T","8","H","Å","D","P","V","C","L","Ö","I","Z","3","Ä","5","Q","O","A","1","H","Q","R","6","B","M","J","9","U","G","7","V","D","3","P","Y","4","N","W","C","X","E","Ö","O","F","L","I","0","S","Å","T","K","Z","Ä","5","2","8"]
+    }
+}

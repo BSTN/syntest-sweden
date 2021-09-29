@@ -1,0 +1,88 @@
+var defaultstorage = {
+    "version": "2.0",
+    "profile": {
+        "PROFILEID": "",
+        "AGE": "",
+        "GENDER": "",
+        "NAME": "",
+        "EMAIL": "",
+        "MAILINGLIST": true,
+        "SCHOOL": "",
+        "MOTHERTONGUE": "",
+        "DYSLEXIA": "",
+        "SYNESTHESIA": "",
+        "CREATIVITY": "",
+        "ARTMUSIC": ""
+    },
+    "tests": {
+        "kleurenalfabet": {
+            "status": {
+                "done": false,
+                "stored": false
+            }
+        },
+        "klankenvorm": {
+            "status": {
+                "done": false,
+                "stored": false
+            }
+        },
+        "klankenbetekenis": {
+            "status": {
+                "done": false,
+                "stored": false
+            },
+            "SOUND": "",
+            "KNOWLEDGE": ""
+        },
+        "synesthesietest": {
+            "status": {
+                "done": false,
+                "stored": false
+            }
+        },
+        "muziek": {
+            "status": {
+                "done": false,
+                "stored": false
+            }
+        },
+        "klinkers": {
+            "status": {
+                "done": false,
+                "stored": false
+            }
+        },
+        "dagenvdweek": {
+            "status": {
+                "done": false,
+                "stored": false
+            }
+        },
+        "cijfers": {
+            "status": {
+                "done": false,
+                "stored": false
+            }
+        },
+        "maanden": {
+            "status": {
+                "done": false,
+                "stored": false
+            }
+        },
+        "cyrillisch": {
+            "status": {
+                "done": false,
+                "stored": false
+            },
+            "KNOWLEDGE": ""
+        },
+        "syntest": {
+            "status": {
+                "done": false,
+                "stored": false
+            }
+        }
+    }
+}

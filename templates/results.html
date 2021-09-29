@@ -1,0 +1,44 @@
+
+<div id='head'>
+    <!-- <a href='tests' id='logo'></a> -->
+
+    <!-- <a href='info' id='info'><i></i><span>info</span></a> -->
+
+    <a ng-click='$root.reset()' id='restart'>starta om</a>
+</div>
+
+<div id='mid'>
+    <div id='left'>
+        <h1>{{testinfo[testid].titles.menushort}}</h1>
+        <p>"Tack för att du gjorde testet! Med din hjälp får vi ny kunskap om synestesi. Vi kan till exempel ta reda på om synestesi är vanligare bland vissa grupper av människor.</p>
+
+        <p>Synestesi är ett sinnesfenomen som förekommer i olika grad hos människor. Personer som har färgsekvens-synestesi upplever alltid samma färg för en viss bokstav eller siffra. Hur ser det ut för dig? Om du valde färger för dem flesta bokstäver/siffror och dessutom valde samma färg vid varje tillfälle samma bokstav/siffra visades har du troligtvis färgsekvens-synestesi – eller ett mycket ovanligt bra minne.</p>
+
+        <p>Om du har fler frågor om synestesi eller ditt resultat kontakta gärna studieledaren (med kontaktuppgifterna du fick via e-post)!”</p>
+
+    </div>
+
+    <div id='itemscore' class='open' ng-hide="hideresults(testid)">
+        <div id='close' ng-click="open=!open"></div>
+        <div id='mid'>
+            <div ng-repeat="(k,s) in score.items | orderObjectBy:'symbol'" id='letter' ng-class="resultsclass()">
+                <div id='symbol' splitcolors='s.colors'>
+                    <span ng-bind='s.symbol' ng-hide='score.sound'></span>
+                    <span soundfile="{{getfolder('mp3',s.symbol)}}" ng-show='score.sound'></span>
+                </div>
+                <div id='color' ng-repeat='ss in s.colors track by $index' ng-style="{background:'#'+ss}"></div>
+                <div id='distance' ng-hide='{{nocolor(s)}}'>
+                    <div id='bar'>
+                        <div w="{{s.distance}}">{{s.distance}}%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div id='bottom'>
+    <label>Ben je synestheet en wil je aan meer onderzoeken meedoen? Ga dan naar de websites van <a href='https://survey.socsci.ru.nl/survey/index/sid/973331/newtest/Y/lang/nl' target='_blank'>Tessa van Leeuwen</a> en <a href='http://www.mpi.nl/departments/language-and-genetics/projects/decoding-the-genetics-of-synaesthesia/nl/study-nl' target='_blank'>Language &amp; Genetics</a>.
+    </label>
+</div> -->

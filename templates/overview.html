@@ -1,0 +1,52 @@
+<div id='head'>
+    <!-- <a ng-href='start' id='logo'></a> -->
+
+    <!-- <a href='info' id='info'><i></i><span>info</span></a> -->
+
+    <!-- <a ng-click='$root.reset()' id='restart'>starta test</a> -->
+
+</div>
+
+<div id="overview">
+<!-- 
+    <div id='introtext'>
+        <b>klicka här för att komma till testet</b> 
+    </div> -->
+    <div id="item" ng-repeat="test in testinfo  | orderObjectBy:'dirname' | filter:main" ng-class="gno.test_class(test.ID)" ng-show="!done(test.ID)">
+        <a ng-href="{{link(test)}}">
+            <i icon="{{test.ID}}"></i>
+            <div id='done'></div>
+            <h4 compile="test.titles.menushort"></h4>
+            <div id='description' ng-show="!done(test.ID)"><div compile="test.titles.description"></div></div>
+            <div id='description' ng-show="done(test.ID)"><div>Visa ditt resultat</div></div>
+            <div id='time' compile="'&plusmn; '+test.titles.time"></div>
+            <div id='percentage' ng-style="{width:percentage(test.ID)+'%'}"></div>
+        </a>
+    </div>
+
+    <div id="item" ng-show="done('bokstaverochsiffror')">
+        <a ng-click='$root.reset()' style="display:block; padding: 4rem;cursor:pointer;" id='restart'>starta test</a>
+    </div>
+
+    <div></div>
+
+   <!--  <div id='extra'><span>extra</span></div>
+
+    <div id="item" ng-repeat="test in testinfo  | orderObjectBy:'dirname' | filter:sub" ng-class="gno.test_class(test.ID)">
+        <a ng-href="{{link(test)}}">
+            <i icon="{{test.ID}}"></i>
+            <div id='done'></div>
+            <h4 compile="test.titles.menushort"></h4>
+            <div id='description' ng-show="!done(test.ID)"><div compile="test.titles.description"></div></div>
+            <div id='description' ng-show="done(test.ID)"><div>Bekijk je resultaat</div></div>
+            <div id='time' compile="'&plusmn; '+test.titles.time"></div>
+            <div id='percentage' ng-style="{width:percentage(test.ID)+'%'}"></div>
+        </a>
+    </div>
+
+    <div id='more' ng-hide='$storage.tests.kleurenalfabet.status.done'><span>Hier verschijnen vanzelf meer tests als je er een paar gedaan hebt!</span></div> -->
+
+</div>
+
+
+<!-- <div class='intro text' ng-hide="$storage.settings.nointro" ng-include="'pages/start'" ng-class='name'></div> -->

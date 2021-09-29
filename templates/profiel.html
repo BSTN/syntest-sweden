@@ -1,0 +1,114 @@
+<form novalidate id='profile'>
+
+    <div id='intro' ng-hide='!profile_empty()'>
+
+        Om de resultaten beter te begrijpen helpt het om iets meer over deelnemers te weten. Daarom vragen we je de volgende velden in te vullen. Je bent niet verplicht dit in te vullen, maar het helpt ons enorm.<br><br>
+
+        De gegevens worden alleen gebruikt voor dit onderzoek en zullen niet openbaar gemaakt worden of met derden gedeeld. We nemen alleen contact met je op als je aangeeft dat je meer wilt horen over de resultaten of mee wilt doen aan eventueel vervolgonderzoek.<Br><Br>
+
+        <button ok>ok</button>
+        <button id='skip' help start>sla over</button>
+
+        <br>
+        <div id='questions'>
+            Heb je verder nog vragen? Neem dan contact op met<Br> <a href='mailto:t.vanleeuwen@fcdonders.ru.nl'>Tessa van Leeuwen</a> of <a href='mailto:mark.dingemanse@mpi.nl'>Mark Dingemanse</a>.
+        </div>
+    </div>
+
+    <button id='fold'>mijn gegevens</button>
+
+    <div id='after'>Dankjewel! Als je wilt kun je meteen door naar je resultaten. We zouden ook blij zijn als je ons nog wat meer achtergrondinformatie kunt geven zodat we de resultaten beter kunnen interpreteren.</div>
+
+
+    <div id='content'>
+        <div>
+            <label class='right'>naam</label>
+            <label class='left'>Naam</label>
+            <div><input value="" type='text' ng-model="$storage.profile.NAME" label/></div>
+        </div>
+
+        <div>
+            <label class='right'>email</label>
+            <label class='left'>Email</label>
+            <div><input value="" type='email' ng-model="$storage.profile.EMAIL" label email/></div>
+        </div>
+
+        <div>
+            <div checkbox='$storage.profile.MAILINGLIST' ng-class="{'active':$storage.profile.MAILINGLIST}" ng-click="$storage.profile.MAILINGLIST=!$storage.profile.MAILINGLIST">
+                <i></i>
+                <span id='label'>Ja, houd me op de hoogte over de resultaten en mogelijk vervolgonderzoek </span>
+                <span id='privacy'>We respecteren je privacy en delen je informatie niet met derden. We spammen je niet en nemen alleen contact met je op als we iets relevants te melden hebben.</span>
+                <div id='border'></div>
+            </div>
+        </div>
+
+        <!-- <div>
+            <label class='right'>contact opnemen mag</label>
+            <label class='left'>Wil je meer horen over de resultaten of een mogelijk vervolgonderzoek? (Geen spam.)</label>
+            <div><input value="" type='text' model="$storage.profile.MAILINGLIST" data="{{['ja','nee']}}" autocomplete="drop"/></div>
+        </div> -->
+
+        <div>
+            <label class='right'>leeftijd</label>
+            <label class='left'>Leeftijd</label>
+            <div><input value="" type='number' ng-model="$storage.profile.AGE" buffer="true" min="0" max="135" label/></div>
+        </div>
+
+        <div>
+            <label class='right'>geslacht</label>
+            <label class='left'>Geslacht</label>
+            <div><input value="" type='text' model="$storage.profile.GENDER" data="{{['man','vrouw','anders']}}" autocomplete="drop"/></div>
+        </div>
+
+        <div>
+            <label class='right'>synesthesie</label>
+            <label class='left'>Heb je synesthesie?</label>
+            <div><input value="" type='text' model="$storage.profile.SYNESTHESIA" data="{{['nee','ja','weet ik niet']}}" autocomplete="drop" /></div>
+        </div>
+
+        <div>
+            <label class='right'>dyslexie</label>
+            <label class='left'>Is dyslexie bij jou vastgesteld?</label>
+            <div><input value="" type='text' model="$storage.profile.DYSLEXIA" data="{{['nee','ja','weet ik niet']}}"  autocomplete="drop" /></div>
+        </div>
+
+        <div>
+            <label class='right'>creativiteit</label>
+            <label class='left'>Hoe creatief vind je jezelf op een schaal van 1-10?</label>
+            <div><input value="" type='text' model="$storage.profile.CREATIVITY" data="{{['1','2','3','4','5','6','7','8','9','10']}}" min='1' max='10' autocomplete="drop"></div>
+        </div>
+
+        <div>
+            <label class='right'>kunst/muziek</label>
+            <label class='left'>Maak je zelf kunst of muziek?</label>
+            <div><input value="" type="text" model="$storage.profile.ARTMUSIC" data="{{['nee','ja','niet echt']}}" autocomplete="drop" /></div>
+        </div>
+
+        <div>
+            <label class='right'>moedertaal</label>
+            <label class='left'>Moedertaal</label>
+            <div><input value="" type='text' model="$storage.profile.MOTHERTONGUE" autocomplete/></div>
+        </div>
+
+        <div>
+            <label class='right'>schoolniveau</label>
+            <label class='left'>Welk schoolniveau heb je afgerond?</label>
+            <div><input value="" type='text' model="$storage.profile.SCHOOL" data="{{['middelbaar onderwijs','voortgezet onderwijs (MBO, secundair onderwijs)','hoger onderwijs (HBO, universiteit)','geen van deze']}}" autocomplete="drop"/></div>
+        </div>
+
+
+        <button ng-click='profile_done()' ng-hide='testid' help start>OK</button>
+        <button ng-click='profile_done()' ng-show='testid' id='continue' help start>Ga door naar de test</button>
+        <button ng-click='profile_done()' ng-show='testid' id='toresults' help start>Ga door naar de resultaten</button>
+
+    </div>
+
+    <div id='forminfo'>
+        Wat doen we met deze gegevens?<br>
+        We zijn benieuwd hoe verschillende mensen de tests in dit onderzoek doen. Om de resultaten beter te begrijpen helpt het om iets meer over deelnemers te weten. Je bent niet verplicht dit in te vullen, maar het helpt ons enorm.<BR><br>
+
+        De gegevens worden alleen gebruikt voor dit onderzoek en zullen niet openbaar gemaakt worden of met derden gedeeld. We nemen alleen contact met je op als je aangeeft dat je meer wilt horen over de resultaten of mee wilt doen aan eventueel vervolgonderzoek.<Br><br>
+        Heb je vragen? Neem dan contact op met<br><a href='mailto:t.vanleeuwen@fcdonders.ru.nl'>Tessa van Leeuwen</a> of <a href='mailto:mark.dingemanse@mpi.nl'>Mark Dingemanse</a>
+    </div>
+
+</form>

@@ -1,0 +1,17 @@
+{
+    "ID": "INT AUTO_INCREMENT PRIMARY KEY",
+    "PROFILEID": "TEXT",
+    "IP": "VARCHAR(255)",
+    "TIMESTAMP": "TIMESTAMP",
+    "USERNAME": "VARCHAR(255)",
+    "Q1": "VARCHAR(255)",
+    "Q2": "VARCHAR(255)",
+    "Q3": "VARCHAR(255)",
+    "Q4": "VARCHAR(255)",
+    "Q5": "VARCHAR(255)",
+    "Q6": "VARCHAR(255)",
+    "Q7": "VARCHAR(255)",
+    "Q8": "VARCHAR(255)",
+    "NOTHING": "VARCHAR(255)",
+    "SOMETHING": "VARCHAR(255)"
+}
