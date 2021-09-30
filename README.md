@@ -4,7 +4,7 @@ _This version of the SenseTest is adjusted for a swedish audience, commissioned 
 
 The test assesses grapheme-color synesthesia (color synesthesia for letters and/or digits). The letters of the alphabet (including the Swedish umlauts Ä, Å, Ä) and the digits 0-9 are presented three times in one out of four randomized orders, randomly assigned to each participant. The hexadecimal color codes are stored or alternatively if the participant presses the "no color" button this information is stored as well. The color codes can then be used to calculate the distance in color space between choices per item and from this the overall consistency score across items. A similar procedure has been used in previous online tasks such as the Synesthesia Battery (Reference: Eagleman, D. M., Kagan, A. D., Nelson, S. S., Sagaram, D., & Sarma, A. K. (2007). A standardized test battery for the study of synesthesia. Journal of neuroscience methods, 159(1), 139-145.).
 
-In order to calculate consistency scores from the data collected with this online test, there is a freely available package written in R at https://github.com/datalowe/synr
+In order to calculate consistency scores from the data collected with this online test, there is a freely available package written in R at [https://github.com/datalowe/synr](https://github.com/datalowe/synr)
 
 ### Requirements
 
